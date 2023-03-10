@@ -11,6 +11,10 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
   <div class="home">
+    <CoolButton @click="hello">B One</CoolButton>
+    <CoolButton @click="bye">B Two</CoolButton>
+    <button>B Three</button>
+    <CoolCard title="Hello" description="No" image="https://cataas.com/cat"></CoolCard>
     <!--     <input type="text" placeholder="edit me" v-model="message" />
     <p>{{ message }}</p>
     <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
@@ -21,28 +25,51 @@ import TheWelcome from '../components/TheWelcome.vue'
     <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
     <label for="mike">Mike</label>
     <br />
-    <span>Checked names: {{ checkedNames }}</span> -->
+    <span>Checked names: {{ checkedNames }}</span> \
     <select v-model="selected">
       <option>A</option>
       <option>B</option>
       <option>C</option>
     </select>
     <span>{{ selected }}</span>
+        <h2>{{ now }}</h2>
+    -->
   </div>
 </template>
 
 <script>
+import CoolButton from '../components/CoolButton.vue'
+import CoolCard from '../components/CoolCard.vue'
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    CoolButton,
+    CoolCard
+  },
   data() {
     return {
-      /* message: ''
-      checkedNames: [] */
       selected: ''
     }
   },
-  methods: {},
+  methods: {
+    hello: function () {
+      alert('hello')
+    },
+
+    bye: function () {
+      alert('bye')
+    }
+  }
+  // name: 'Home',
+  // components: {},
+  // data() {
+  //   return {
+  //     /* message: ''
+  //     checkedNames: [] */
+  //     selected: ''
+  //   }
+  // },
+  // methods: {}
   // components: {},
   // data() {
   //   return {
@@ -62,12 +89,12 @@ export default {
   //     }
   //   }
   // }
-  computed: {
-    now: function () {
-      const time = new Date()
-      return `${time.getHours}:${time.getMinutes}`
-    }
-  }
+  // computed: {
+  //   now: function () {
+  //     const time = new Date()
+  //     return `${time.getHours()}:${time.getMinutes()}`
+  //   }
+  // }
 }
 </script>
 
