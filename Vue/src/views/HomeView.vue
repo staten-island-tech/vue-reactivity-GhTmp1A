@@ -15,6 +15,14 @@ import TheWelcome from '../components/TheWelcome.vue'
     <CoolButton @click="bye">B Two</CoolButton>
     <button>B Three</button>
     <CoolCard title="Hello" description="No" image="https://cataas.com/cat"></CoolCard>
+    <CoolCard
+      v-for="destination in destinations"
+      :key="destination.name"
+      :title="destination.name"
+      :price="destination.price"
+      :image="destination.img"
+    >
+    </CoolCard>
     <!--     <input type="text" placeholder="edit me" v-model="message" />
     <p>{{ message }}</p>
     <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
@@ -48,7 +56,27 @@ export default {
   },
   data() {
     return {
-      selected: ''
+      selected: '',
+      destinations: [
+        {
+          name: 'a',
+          Factor: 'a',
+          price: 10,
+          img: 'https://cataas.com/cat'
+        },
+        {
+          name: 'b',
+          Factor: 'b',
+          price: 11,
+          img: 'https://cataas.com/cat'
+        },
+        {
+          name: 'b',
+          Factor: 'b',
+          price: 12,
+          img: 'https://cataas.com/cat'
+        }
+      ]
     }
   },
   methods: {
