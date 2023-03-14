@@ -1,47 +1,17 @@
-<!-- <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
- -->
-
 <template>
   <div class="home">
-    <CoolButton @click="hello">B One</CoolButton>
+    <CoolButton @click="addcart">B One</CoolButton>
     <CoolButton @click="bye">B Two</CoolButton>
     <button>B Three</button>
-    <CoolCard title="Hello" description="No" image="https://cataas.com/cat"></CoolCard>
     <CoolCard
       v-for="destination in destinations"
       :key="destination.name"
       :title="destination.name"
       :price="destination.price"
+      :description="destination.description"
       :image="destination.img"
     >
     </CoolCard>
-    <!--     <input type="text" placeholder="edit me" v-model="message" />
-    <p>{{ message }}</p>
-    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
-    Reflects whatever data is selected in the export data.
-    <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John" v-model="checkedNames" />
-    <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
-    <label for="mike">Mike</label>
-    <br />
-    <span>Checked names: {{ checkedNames }}</span> \
-    <select v-model="selected">
-      <option>A</option>
-      <option>B</option>
-      <option>C</option>
-    </select>
-    <span>{{ selected }}</span>
-        <h2>{{ now }}</h2>
-    -->
   </div>
 </template>
 
@@ -59,22 +29,22 @@ export default {
       selected: '',
       destinations: [
         {
-          name: 'a',
-          Factor: 'a',
+          name: 'Snowmann',
+          description: 'Check',
           price: 10,
-          img: 'https://cataas.com/cat'
+          img: 'https://wiki.teamfortress.com/w/images/thumb/9/96/Painted_Snowmann_654740.png/65px-Painted_Snowmann_654740.png'
         },
         {
-          name: 'b',
-          Factor: 'b',
+          name: 'Hypno-Eyes',
+          description: 'Check',
           price: 11,
-          img: 'https://cataas.com/cat'
+          img: 'https://wiki.teamfortress.com/w/images/thumb/a/a7/Backpack_Hypno-eyes.png/90px-Backpack_Hypno-eyes.png'
         },
         {
-          name: 'b',
-          Factor: 'b',
+          name: 'Battle Bear',
+          description: 'b',
           price: 12,
-          img: 'https://cataas.com/cat'
+          img: 'https://wiki.teamfortress.com/w/images/thumb/9/9c/RED_Battle_Bear_Bare.png/72px-RED_Battle_Bear_Bare.png'
         }
       ]
     }
@@ -83,7 +53,9 @@ export default {
     hello: function () {
       alert('hello')
     },
-
+    addcart: function () {
+      console.log('works')
+    },
     bye: function () {
       alert('bye')
     }

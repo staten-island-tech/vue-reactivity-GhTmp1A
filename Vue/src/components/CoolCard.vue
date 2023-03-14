@@ -3,6 +3,7 @@
     <h2>{{ title }}</h2>
     <img :src="getImage" alt="" />
     <p>{{ description }}</p>
+    <h3>{{ price }}</h3>
   </div>
 </template>
 
@@ -25,8 +26,9 @@ export default {
 
 <style>
 .card {
-  width: 30%;
+  width: 100%%;
   background-color: blue;
+  color: white;
   margin: 10px auto;
   height: 500px;
 }
