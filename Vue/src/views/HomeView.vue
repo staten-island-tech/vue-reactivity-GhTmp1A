@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <CoolButton @click="addcart">B One</CoolButton>
+    <CoolButton @click="hello">B One</CoolButton>
     <CoolButton @click="bye">B Two</CoolButton>
     <button>B Three</button>
     <CoolCard
@@ -10,6 +10,7 @@
       :price="destination.price"
       :description="destination.description"
       :image="destination.img"
+      :button="destination.button"
     >
     </CoolCard>
   </div>
@@ -32,13 +33,14 @@ export default {
           name: 'Snowmann',
           description: 'Check',
           price: 10,
-          img: 'https://wiki.teamfortress.com/w/images/thumb/9/96/Painted_Snowmann_654740.png/65px-Painted_Snowmann_654740.png'
+          img: 'https://wiki.teamfortress.com/w/images/thumb/9/96/Painted_Snowmann_654740.png/65px-Painted_Snowmann_654740.png',
+          button: 'test'
         },
         {
-          name: 'Hypno-Eyes',
+          name: 'Tom-Readers',
           description: 'Check',
           price: 11,
-          img: 'https://wiki.teamfortress.com/w/images/thumb/a/a7/Backpack_Hypno-eyes.png/90px-Backpack_Hypno-eyes.png'
+          img: 'https://wiki.teamfortress.com/w/images/thumb/d/d7/RED_Tomb_Readers.png/85px-RED_Tomb_Readers.png'
         },
         {
           name: 'Battle Bear',
@@ -52,9 +54,6 @@ export default {
   methods: {
     hello: function () {
       alert('hello')
-    },
-    addcart: function () {
-      console.log('works')
     },
     bye: function () {
       alert('bye')

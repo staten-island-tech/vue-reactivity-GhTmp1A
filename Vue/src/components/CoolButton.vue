@@ -1,10 +1,11 @@
 <template>
-  <button><slot></slot></button>
+  <button></button>
 </template>
 
 <script>
 export default {
-  name: 'CoolButton'
+  name: 'CoolButton',
+  methods: {}
 }
 </script>
 

@@ -4,17 +4,20 @@
     <img :src="getImage" alt="" />
     <p>{{ description }}</p>
     <h3>{{ price }}</h3>
+    <button>{{ button }} Add to cart</button>
   </div>
 </template>
 
 <script>
+import CoolButton from '../components/CoolButton.vue'
 export default {
   name: 'CoolCard',
   props: {
     title: String,
     description: String,
     image: String,
-    price: Number
+    price: Number,
+    button: CoolButton
   },
   computed: {
     getImage: function () {
