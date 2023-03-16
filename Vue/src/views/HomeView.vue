@@ -10,7 +10,6 @@
       :price="destination.price"
       :description="destination.description"
       :image="destination.img"
-      :button="destination.button"
     >
     </CoolCard>
   </div>
@@ -30,11 +29,10 @@ export default {
       selected: '',
       destinations: [
         {
-          name: 'Snowmann',
+          name: 'Blizzard Breather',
           description: 'Check',
           price: 10,
-          img: 'https://wiki.teamfortress.com/w/images/thumb/9/96/Painted_Snowmann_654740.png/65px-Painted_Snowmann_654740.png',
-          button: 'test'
+          img: 'https://wiki.teamfortress.com/w/images/thumb/6/68/Item_icon_Blizzard_Breather.png/75px-Item_icon_Blizzard_Breather.png'
         },
         {
           name: 'Tom-Readers',
@@ -43,10 +41,10 @@ export default {
           img: 'https://wiki.teamfortress.com/w/images/thumb/d/d7/RED_Tomb_Readers.png/85px-RED_Tomb_Readers.png'
         },
         {
-          name: 'Battle Bear',
+          name: 'Dr. Woah',
           description: 'b',
           price: 12,
-          img: 'https://wiki.teamfortress.com/w/images/thumb/9/9c/RED_Battle_Bear_Bare.png/72px-RED_Battle_Bear_Bare.png'
+          img: 'https://wiki.teamfortress.com/w/images/thumb/a/a0/Item_icon_Dr._Whoa.png/75px-Item_icon_Dr._Whoa.png'
         }
       ]
     }

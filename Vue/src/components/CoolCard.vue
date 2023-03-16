@@ -4,7 +4,7 @@
     <img :src="getImage" alt="" />
     <p>{{ description }}</p>
     <h3>{{ price }}</h3>
-    <button>{{ button }} Add to cart</button>
+    <button @click="test">{{ button }} Add to cart</button>
   </div>
 </template>
 
@@ -22,7 +22,8 @@ export default {
   computed: {
     getImage: function () {
       return this.image
-    }
+    },
+    test: function () {}
   }
 }
 </script>
