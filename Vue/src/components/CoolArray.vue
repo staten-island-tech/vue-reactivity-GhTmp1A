@@ -1,5 +1,10 @@
-<template></template>
+<template>
+  <h2></h2>
+</template>
 
-<script></script>
-
+<script>
+export default {
+  test: []
+}
+</script>
 <style></style>

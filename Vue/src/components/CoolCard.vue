@@ -10,6 +10,7 @@
 
 <script>
 import CoolButton from '../components/CoolButton.vue'
+import CoolArray from './CoolArray.vue'
 export default {
   name: 'CoolCard',
   props: {
@@ -19,11 +20,16 @@ export default {
     price: Number,
     button: CoolButton
   },
+  components: {
+    array: CoolArray
+  },
   computed: {
     getImage: function () {
       return this.image
     },
-    test: function () {}
+    test: function () {
+      console.log('test')
+    }
   }
 }
 </script>

@@ -2,6 +2,7 @@
   <div class="home">
     <CoolButton @click="hello">B One</CoolButton>
     <CoolButton @click="bye">B Two</CoolButton>
+
     <button>B Three</button>
     <CoolCard
       v-for="destination in destinations"
@@ -12,17 +13,20 @@
       :image="destination.img"
     >
     </CoolCard>
+    <CoolArray v-for="cart in carts" :key="cart.price" :price="cart.price">Test</CoolArray>
   </div>
 </template>
 
 <script>
 import CoolButton from '../components/CoolButton.vue'
 import CoolCard from '../components/CoolCard.vue'
+import CoolArray from '../components/CoolArray.vue'
 export default {
   name: 'Home',
   components: {
     CoolButton,
-    CoolCard
+    CoolCard,
+    CoolArray
   },
   data() {
     return {
@@ -45,6 +49,11 @@ export default {
           description: 'b',
           price: 12,
           img: 'https://wiki.teamfortress.com/w/images/thumb/a/a0/Item_icon_Dr._Whoa.png/75px-Item_icon_Dr._Whoa.png'
+        }
+      ],
+      carts: [
+        {
+          price: '1'
         }
       ]
     }
