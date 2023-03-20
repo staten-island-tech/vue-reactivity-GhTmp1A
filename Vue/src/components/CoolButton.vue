@@ -1,12 +1,11 @@
 <template>
-  <button></button>
+  <div>
+    <button @click="cart.money++">{{ cart.money }}</button>
+  </div>
 </template>
 
-<script>
-export default {
-  name: 'CoolButton',
-  methods: {}
-}
+<script setup>
+import { cart } from './array'
 </script>
 
 <style scoped>

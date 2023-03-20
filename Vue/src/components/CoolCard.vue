@@ -4,12 +4,10 @@
     <img :src="getImage" alt="" />
     <p>{{ description }}</p>
     <h3>{{ price }}</h3>
-    <button @click="test">{{ button }} Add to cart</button>
   </div>
 </template>
 
 <script>
-import CoolButton from '../components/CoolButton.vue'
 import CoolArray from './CoolArray.vue'
 export default {
   name: 'CoolCard',
@@ -17,8 +15,7 @@ export default {
     title: String,
     description: String,
     image: String,
-    price: Number,
-    button: CoolButton
+    price: Number
   },
   components: {
     array: CoolArray
@@ -26,9 +23,6 @@ export default {
   computed: {
     getImage: function () {
       return this.image
-    },
-    test: function () {
-      console.log('test')
     }
   }
 }

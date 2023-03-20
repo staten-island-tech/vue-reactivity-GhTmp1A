@@ -1,10 +1,12 @@
-<template>
-  <h2></h2>
-</template>
+<template></template>
 
-<script>
-export default {
-  test: []
-}
+<!-- <script setup>
+const cart = [
+  {
+    money: 0,
+    items: ''
+  }
+]
 </script>
 <style></style>
+ -->
