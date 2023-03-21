@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import CoolArray from './CoolArray.vue'
 export default {
   name: 'CoolCard',
   props: {
@@ -17,9 +16,7 @@ export default {
     image: String,
     price: Number
   },
-  components: {
-    array: CoolArray
-  },
+  components: {},
   computed: {
     getImage: function () {
       return this.image

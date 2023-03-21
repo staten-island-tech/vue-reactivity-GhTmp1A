@@ -1,11 +1,20 @@
 <template>
   <div>
-    <button @click="cart.money++">{{ cart.money }}</button>
+    <button @click="RaisePrice">Test</button>
   </div>
 </template>
 
-<script setup>
+<script>
 import { cart } from './array'
+export default {
+  props: { price: Number },
+  methods: {
+    RaisePrice: function () {
+      cart.money++
+      console.log('TEST')
+    }
+  }
+}
 </script>
 
 <style scoped>
