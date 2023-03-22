@@ -22,8 +22,21 @@ import CoolCard from '../components/CoolCard.vue'
 
 <script>
 export default {
-  components: { CoolCard },
+  components: { CoolCard, cart },
   data() {
+    return {
+      selected: '',
+      destinations: [
+        {
+          name: cart.item[0].name,
+          description: cart.item[0].description,
+          price: cart.item[0].price,
+          img: cart.item[0].img
+        }
+      ]
+    }
+  }
+  /*  data() {
     return {
       selected: '',
       destinations: [
@@ -41,13 +54,13 @@ export default {
         },
         {
           name: 'Dr. Woah',
-          description: 'b',
+          description: 'Check',
           price: 12,
           img: 'https://wiki.teamfortress.com/w/images/thumb/a/a0/Item_icon_Dr._Whoa.png/75px-Item_icon_Dr._Whoa.png'
         }
       ]
     }
-  }
+  } */
 }
 </script>
 

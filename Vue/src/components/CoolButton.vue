@@ -6,12 +6,15 @@
 
 <script>
 import { cart } from './array'
+import CoolCard from '../components/CoolCard.vue'
 export default {
-  props: { price: Number },
+  components: {
+    CoolCard
+  },
   methods: {
     RaisePrice: function () {
       cart.money++
-      console.log('TEST')
+      console.log(cart.item[0])
     }
   }
 }
