@@ -32,6 +32,18 @@ export default {
           description: cart.item[0].description,
           price: cart.item[0].price,
           img: cart.item[0].img
+        },
+        {
+          name: cart.item[1].name,
+          description: cart.item[1].description,
+          price: cart.item[1].price,
+          img: cart.item[1].img
+        },
+        {
+          name: cart.item[2].name,
+          description: cart.item[2].description,
+          price: cart.item[2].price,
+          img: cart.item[2].img
         }
       ]
     }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="RaisePrice">Test</button>
+    <button @click="RaisePrice"><slot></slot></button>
   </div>
 </template>
 
@@ -12,10 +12,7 @@ export default {
     CoolCard
   },
   methods: {
-    RaisePrice: function () {
-      cart.money++
-      console.log(cart.item[0])
-    }
+    RaisePrice: function () {}
   }
 }
 </script>
