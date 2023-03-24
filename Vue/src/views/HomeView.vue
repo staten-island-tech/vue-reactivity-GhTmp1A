@@ -22,7 +22,7 @@ import CoolCard from '../components/CoolCard.vue'
 
 <script>
 export default {
-  components: { CoolCard, cart },
+  components: { CoolCard, cart, CoolButton },
   data() {
     return {
       selected: '',

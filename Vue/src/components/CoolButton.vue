@@ -8,11 +8,14 @@
 import { cart } from './array'
 import CoolCard from '../components/CoolCard.vue'
 export default {
+  name: `CoolButton`,
   components: {
     CoolCard
   },
   methods: {
-    RaisePrice: function () {}
+    RaisePrice: function () {
+      cart.money++
+    }
   }
 }
 </script>
