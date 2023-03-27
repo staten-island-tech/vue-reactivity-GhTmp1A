@@ -1,8 +1,19 @@
 <template>
   <div class="home">
-    <h2>Price is: {{ cart.money }}</h2>
-    <h2>Price is also: {{ cart.money }}</h2>
+    <h1 class="header">
+      Hello again! So, as you've noticed, we've got ourselves into a bit of a pickle. I don't like
+      to do things twice around here, but my hand's been forced again. Instead of someone siphoning
+      out crates and acquiring them for free (horrible), now they're siphoning the items OUT of the
+      crates! Without using keys! What could compell someone to do such an evil act? Well,
+      regardless, this is a small step up from simple crates, as these items have actual, wait for
+      it, value (the suits didn't need to tell me that one). Now I hear you asking once again,
+      "Saxton. What are you going to do with all of these items lying around?". Well, I'll tell you
+      what. We're doing it again- welcome to the re-temporarily refurbished ITEM store! Have a look
+      around, buy, buy, buy, and be careful! Or reckless!
+    </h1>
+    <h2 id="cart">Cart: ${{ cart.money }}</h2>
     <CoolCard
+      class="CoolCard"
       v-for="destination in destinations"
       :key="destination.name"
       :title="destination.name"
@@ -10,7 +21,6 @@
       :description="destination.description"
       :image="destination.img"
     ></CoolCard>
-    <CoolButton></CoolButton>
   </div>
 </template>
 
@@ -44,40 +54,50 @@ export default {
           description: cart.item[2].description,
           price: cart.item[2].price,
           img: cart.item[2].img
+        },
+        {
+          name: cart.item[3].name,
+          description: cart.item[3].description,
+          price: cart.item[3].price,
+          img: cart.item[3].img
+        },
+        {
+          name: cart.item[4].name,
+          description: cart.item[4].description,
+          price: cart.item[4].price,
+          img: cart.item[4].img
+        },
+        {
+          name: cart.item[5].name,
+          description: cart.item[5].description,
+          price: cart.item[5].price,
+          img: cart.item[5].img
         }
       ]
     }
   }
-  /*  data() {
-    return {
-      selected: '',
-      destinations: [
-        {
-          name: 'Blizzard Breather',
-          description: 'Check',
-          price: 10,
-          img: 'https://wiki.teamfortress.com/w/images/thumb/6/68/Item_icon_Blizzard_Breather.png/75px-Item_icon_Blizzard_Breather.png'
-        },
-        {
-          name: 'Tom-Readers',
-          description: 'Check',
-          price: 11,
-          img: 'https://wiki.teamfortress.com/w/images/thumb/d/d7/RED_Tomb_Readers.png/85px-RED_Tomb_Readers.png'
-        },
-        {
-          name: 'Dr. Woah',
-          description: 'Check',
-          price: 12,
-          img: 'https://wiki.teamfortress.com/w/images/thumb/a/a0/Item_icon_Dr._Whoa.png/75px-Item_icon_Dr._Whoa.png'
-        }
-      ]
-    }
-  } */
 }
 </script>
 
-<style>
+<style scoped>
 h1 {
   color: black;
+}
+
+.CoolCard {
+  border: solid 10px red;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 10px;
+}
+
+.header {
+  color: white;
+}
+
+#cart {
+  font-size: 5rem;
+  color: white;
 }
 </style>

@@ -1,25 +1,48 @@
 import { reactive } from 'vue'
 
 export const cart = reactive({
-  money: 1,
+  money: 0,
   item: [
     {
-      name: 'Blizzard Breather',
-      description: 'Check',
-      price: 10,
-      img: 'https://wiki.teamfortress.com/w/images/thumb/6/68/Item_icon_Blizzard_Breather.png/75px-Item_icon_Blizzard_Breather.png'
+      name: 'Monsieur Grenouille',
+      description: 'What a polite chap. He seems to be having a splendid day.',
+      price: 2,
+      img: 'https://wiki.teamfortress.com/w/images/thumb/b/b3/RED_Monsieur_Grenouille_Paint_Hat.png/85px-RED_Monsieur_Grenouille_Paint_Hat.png'
     },
     {
-      name: 'Tom-Readers',
-      description: 'Check',
-      price: 11,
-      img: 'https://wiki.teamfortress.com/w/images/thumb/d/d7/RED_Tomb_Readers.png/85px-RED_Tomb_Readers.png'
+      name: 'Tropical Camo',
+      description: 'A well made clothing item for sure. Seems to be a vacation piece.',
+      price: 53,
+      img: 'https://wiki.teamfortress.com/w/images/thumb/0/07/RED_Tropical_Camo_Bold.png/80px-RED_Tropical_Camo_Bold.png'
     },
     {
-      name: 'Dr. Woah',
-      description: 'Check',
-      price: 12,
-      img: 'https://wiki.teamfortress.com/w/images/thumb/a/a0/Item_icon_Dr._Whoa.png/75px-Item_icon_Dr._Whoa.png'
+      name: 'Fizzy Pharmacist',
+      description: 'Hm. A turn from the expected, but welcome nevertheless.',
+      price: 62,
+      img: 'https://wiki.teamfortress.com/w/images/thumb/5/5d/RED_Fizzy_Pharmacist_Bubbly.png/84px-RED_Fizzy_Pharmacist_Bubbly.png'
+    },
+    {
+      name: 'Lawnmaker',
+      description:
+        'Are those earmuffs and lenses real? What a great question, and only $45 away from finding out',
+      price: 45,
+      img: 'https://wiki.teamfortress.com/w/images/thumb/7/78/RED_Lawnmaker.png/73px-RED_Lawnmaker.png'
+    },
+    {
+      name: 'Tactical Turtleneck',
+      description:
+        'Well, well, well. Another suit piece. Almost seems like they just keep being made.',
+      price: 106,
+      img: 'https://wiki.teamfortress.com/w/images/thumb/1/12/RED_Tactical_Turtleneck.png/85px-RED_Tactical_Turtleneck.png'
+    },
+    {
+      name: 'Decorated Veteran',
+      description:
+        'Hm.. Now THIS is a fine piece indeed. Might not look like it, but lots of customization AND all-class.',
+      price: 200,
+      img: 'https://wiki.teamfortress.com/w/images/thumb/9/96/Painted_Decorated_Veteran_UNPAINTED.png/85px-Painted_Decorated_Veteran_UNPAINTED.png'
     }
   ]
 })
+
+export const cart1 = []

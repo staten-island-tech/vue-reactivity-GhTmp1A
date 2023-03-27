@@ -1,22 +1,17 @@
 <template>
   <div>
-    <button @click="RaisePrice"><slot></slot></button>
+    <button><slot></slot></button>
   </div>
 </template>
 
 <script>
-import { cart } from './array'
 import CoolCard from '../components/CoolCard.vue'
 export default {
   name: `CoolButton`,
   components: {
     CoolCard
   },
-  methods: {
-    RaisePrice: function () {
-      cart.money++
-    }
-  }
+  methods: {}
 }
 </script>
 

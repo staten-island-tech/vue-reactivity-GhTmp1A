@@ -1,10 +1,12 @@
 <template>
   <div class="card">
-    <h2>{{ title }}</h2>
-    <img :src="getImage" alt="" />
-    <p>{{ description }}</p>
-    <h3>{{ price }}</h3>
-    <CoolButton></CoolButton>
+    <h2 class="title">{{ title }}</h2>
+    <img class="img" :src="getImage" alt="" />
+    <p class="description">{{ description }}</p>
+    <h3 class="price">Price per item: ${{ price }}</h3>
+    <CoolButton class="CoolButton">
+      <span class="returnPrice" @click="returnPrice">Add to cart</span></CoolButton
+    >
   </div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
   data() {
     return {
       name: 'CoolCard',
-      components: { cart, CoolButton }
+      components: { cart, cart1, CoolButton }
     }
   },
   props: {
@@ -30,6 +32,7 @@ export default {
   methods: {
     returnPrice: function () {
       console.log(this.price)
+      ;(cart.money += this.price).toFixed(2)
     }
   }
 }
@@ -37,18 +40,41 @@ export default {
 
 <script setup>
 import CoolButton from './CoolButton.vue'
-import { cart } from './array'
+import { cart, cart1 } from './array'
 </script>
 
-<style>
+<style scoped>
 .card {
   width: 100%%;
-  background-color: blue;
+  background-color: black;
   color: white;
   margin: 10px auto;
-  height: 500px;
 }
-img {
-  width: 100%;
+
+.img {
+  width: 200px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.description {
+  font-size: 2rem;
+}
+.price {
+  font-size: 2rem;
+}
+
+.CoolButton {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.returnPrice {
+  font-size: 2rem;
 }
 </style>
