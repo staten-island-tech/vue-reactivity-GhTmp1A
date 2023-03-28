@@ -11,7 +11,9 @@
       what. We're doing it again- welcome to the re-temporarily refurbished ITEM store! Have a look
       around, buy, buy, buy, and be careful! Or reckless!
     </h1>
-    <h2 id="cart">Cart: ${{ cart.money }}</h2>
+    <CoolCart>
+      <h2 id="cart">Cart: ${{ cart.money }}</h2>
+    </CoolCart>
     <CoolCard
       class="CoolCard"
       v-for="destination in destinations"
@@ -25,14 +27,16 @@
 </template>
 
 <script setup>
-import { cart } from '../components/array'
+import { cart, cartDisplay } from '../components/array'
 import CoolButton from '../components/CoolButton.vue'
 import CoolCard from '../components/CoolCard.vue'
+import CoolCart from '../components/CoolCart.vue'
 </script>
 
 <script>
 export default {
-  components: { CoolCard, cart, CoolButton },
+  components: { CoolCard, cart, CoolButton, CoolCart },
+  methods: {},
   data() {
     return {
       selected: '',
@@ -93,11 +97,11 @@ h1 {
 }
 
 .header {
-  color: white;
+  color: black;
 }
 
 #cart {
   font-size: 5rem;
-  color: white;
+  color: black;
 }
 </style>

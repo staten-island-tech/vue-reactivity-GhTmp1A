@@ -4,9 +4,7 @@
     <img class="img" :src="getImage" alt="" />
     <p class="description">{{ description }}</p>
     <h3 class="price">Price per item: ${{ price }}</h3>
-    <CoolButton class="CoolButton">
-      <span class="returnPrice" @click="returnPrice">Add to cart</span></CoolButton
-    >
+    <CoolButton class="CoolButton" @click="returnPrice"> Add to cart</CoolButton>
   </div>
 </template>
 
@@ -15,7 +13,7 @@ export default {
   data() {
     return {
       name: 'CoolCard',
-      components: { cart, cart1, CoolButton }
+      components: { cart, cartDisplay, CoolButton }
     }
   },
   props: {
@@ -32,7 +30,8 @@ export default {
   methods: {
     returnPrice: function () {
       console.log(this.price)
-      ;(cart.money += this.price).toFixed(2)
+      cart.money += this.price
+      cartDisplay.push(this.title)
     }
   }
 }
@@ -40,30 +39,69 @@ export default {
 
 <script setup>
 import CoolButton from './CoolButton.vue'
-import { cart, cart1 } from './array'
+import { cart, cartDisplay } from './array'
 </script>
 
 <style scoped>
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: 'Finlandica', sans-serif;
+}
+
 .card {
-  width: 100%%;
   background-color: black;
   color: white;
-  margin: 10px auto;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  width: 35rem;
 }
 
 .img {
   width: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .title {
   font-size: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .description {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
 }
+
 .price {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .CoolButton {

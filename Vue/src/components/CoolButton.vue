@@ -15,9 +15,23 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 button {
-  border: red solid 5px;
-  border-radius: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  margin: 1rem auto;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  color: black;
+  box-shadow: red 2px 2px 2px 0.25rem;
+  border: solid black 1px;
 }
 </style>

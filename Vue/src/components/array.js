@@ -45,4 +45,4 @@ export const cart = reactive({
   ]
 })
 
-export const cart1 = []
+export const cartDisplay = []
