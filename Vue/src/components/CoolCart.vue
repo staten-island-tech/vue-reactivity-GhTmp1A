@@ -1,7 +1,15 @@
 <template>
   <div>
-    <button @click="returnCart"><slot></slot></button>
-    <h1 v-for="item in cartDisplay" :key="item" :title="item">Bought items:{{ item.title }}</h1>
+    <button @click="returnCart" v-on:click="cartState"><slot></slot></button>
+    <h1
+      class="itemClass"
+      v-bind="display"
+      v-for="item in cartDisplay"
+      :key="item.items"
+      :title="item.items"
+    >
+      {{ item }}
+    </h1>
   </div>
 </template>
 
@@ -16,16 +24,24 @@ export default {
   data() {
     return {
       name: 'CoolCart',
-      components: { CoolCard, cartDisplay, cart }
+      components: { CoolCard, cartDisplay, cart },
+      display: false
     }
   },
   props: {
-    title: String
+    items: String
   },
   methods: {
     returnCart: function () {
       cartDisplay.forEach((item) => console.log(item))
       console.log(cartDisplay)
+    },
+    cartState: function () {
+      if (this.display == false) {
+        document.querySelector('itemClass').style.displays = 'none'
+      } else {
+        cartDisplay.forEach((item) => (item.style.display = false))
+      }
     }
   }
 }

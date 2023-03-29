@@ -12,6 +12,7 @@
       around, buy, buy, buy, and be careful! Or reckless!
     </h1>
     <CoolCart>
+      (Click to see your items)
       <h2 id="cart">Cart: ${{ cart.money }}</h2>
     </CoolCart>
     <CoolCard
