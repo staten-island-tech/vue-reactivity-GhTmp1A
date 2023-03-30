@@ -11,7 +11,7 @@
       what. We're doing it again- welcome to the re-temporarily refurbished ITEM store! Have a look
       around, buy, buy, buy, and be careful! Or reckless!
     </h1>
-    <CoolCart>
+    <CoolCart class="CoolCart">
       (Click to see your items)
       <h2 id="cart">Cart: ${{ cart.money }}</h2>
     </CoolCart>
@@ -95,6 +95,11 @@ h1 {
   flex-wrap: wrap;
   margin: 1rem;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .header {
@@ -104,5 +109,12 @@ h1 {
 #cart {
   font-size: 5rem;
   color: black;
+}
+.CoolCart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 </style>
