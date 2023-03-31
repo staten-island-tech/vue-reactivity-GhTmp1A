@@ -53,7 +53,6 @@ body,
 }
 
 .card {
-  background-color: black;
   color: white;
   margin: 2px;
   display: flex;

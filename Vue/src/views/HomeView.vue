@@ -15,15 +15,17 @@
       (Click to see your items)
       <h2 id="cart">Cart: ${{ cart.money }}</h2>
     </CoolCart>
-    <CoolCard
-      class="CoolCard"
-      v-for="destination in destinations"
-      :key="destination.name"
-      :title="destination.name"
-      :price="destination.price"
-      :description="destination.description"
-      :image="destination.img"
-    ></CoolCard>
+    <div class="CoolCardContainer">
+      <CoolCard
+        class="CoolCard"
+        v-for="destination in destinations"
+        :key="destination.name"
+        :title="destination.name"
+        :price="destination.price"
+        :description="destination.description"
+        :image="destination.img"
+      ></CoolCard>
+    </div>
   </div>
 </template>
 
@@ -85,25 +87,34 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  color: black;
+.home {
+  background-color: #274b64;
+}
+
+.CoolCardContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .CoolCard {
-  border: solid 10px red;
+  border: solid 10px #891c1e;
+  background-color: #b8383b;
   border-radius: 5px;
   flex-wrap: wrap;
-  margin: 1rem;
+  width: 35rem;
   padding: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
   flex-wrap: wrap;
+  margin: 20px;
+  justify-content: center;
 }
 
 .header {
-  color: black;
+  color: #fb524f;
 }
 
 #cart {

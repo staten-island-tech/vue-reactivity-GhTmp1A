@@ -31,7 +31,7 @@ button {
 button:hover {
   transform: translateY(-2px);
   color: black;
-  box-shadow: red 2px 2px 2px 0.25rem;
+  box-shadow: #5885a2 2px 2px 2px 0.25rem;
   border: solid black 1px;
 }
 </style>
