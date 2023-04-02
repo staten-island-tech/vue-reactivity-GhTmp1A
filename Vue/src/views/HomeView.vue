@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .home {
-  background-color: #274b64;
+  background-color: #891c1e;
 }
 
 .CoolCardContainer {
@@ -98,7 +98,7 @@ export default {
 }
 
 .CoolCard {
-  border: solid 10px #891c1e;
+  border: solid 10px #440708;
   background-color: #b8383b;
   border-radius: 5px;
   flex-wrap: wrap;
@@ -114,7 +114,12 @@ export default {
 }
 
 .header {
-  color: #fb524f;
+  color: #5f0d0e;
+  background-color: #ffcccb;
+  border: solid #b8383b 12px;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
 }
 
 #cart {

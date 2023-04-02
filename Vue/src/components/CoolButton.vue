@@ -30,8 +30,9 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  color: black;
-  box-shadow: #5885a2 2px 2px 2px 0.25rem;
-  border: solid black 1px;
+  color: #440708;
+  background-color: ;
+  box-shadow: #ffcccb 2px 2px 2px 0.25rem;
+  border: solid #891c1e 1px;
 }
 </style>

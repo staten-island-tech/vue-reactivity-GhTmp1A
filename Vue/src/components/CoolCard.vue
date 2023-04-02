@@ -101,6 +101,9 @@ body,
   flex-direction: column;
   box-sizing: border-box;
   flex-wrap: wrap;
+  padding: 0.5rem;
+  border: solid #3d0809 10px;
+  border-radius: 12px;
 }
 
 .CoolButton {

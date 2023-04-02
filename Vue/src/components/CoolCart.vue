@@ -43,6 +43,11 @@ export default {
 </script>
 
 <style scoped>
+#itemClass {
+  color: #fde5e4;
+  font-size: 2rem;
+}
+
 .img {
   width: 50px;
 }
