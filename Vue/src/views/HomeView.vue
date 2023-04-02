@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { cart, cartDisplay } from '../components/array'
+import { cart } from '../components/array'
 import CoolButton from '../components/CoolButton.vue'
 import CoolCard from '../components/CoolCard.vue'
 import CoolCart from '../components/CoolCart.vue'

@@ -80,7 +80,6 @@ body,
   flex-direction: column;
   box-sizing: border-box;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .description {
@@ -90,7 +89,6 @@ body,
   flex-direction: column;
   box-sizing: border-box;
   flex-wrap: wrap;
-  align-items: center;
   text-align: center;
 }
 
